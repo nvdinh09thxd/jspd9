@@ -29,10 +29,12 @@
 		<!-- begin menu -->
 		<div id="menu">
 			<ul>
-				<li class="active"><a href="<%=request.getContextPath() %>/views/anews/index.jsp" title="">Trang chủ</a></li>
-				<li><a href="<%=request.getContextPath() %>/views/anews/tintuc.jsp" title="">Tin tức</a></li>
-				<li><a href="<%=request.getContextPath() %>/views/anews/lienhe.jsp" title="">Liên hệ</a></li>
+				<li class="active"><a href="<%=request.getContextPath() %>/index" title="">Trang chủ</a></li>
+				<li><a href="<%=request.getContextPath() %>/news" title="">Tin tức</a></li>
+				<li><a href="<%=request.getContextPath() %>/contact" title="">Liên hệ</a></li>
 			</ul>
 			<div class="clr"></div>
 		</div>
 		<!-- end menu -->
+		
+		

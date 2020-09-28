@@ -1,3 +1,4 @@
+<%@page import="models.News"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/views/anews/inc/header.jsp"%>
@@ -8,17 +9,15 @@
 		<%@ include file="/views/anews/inc/sidebar.jsp"%>
 	</div>
 	<div class="content-right fr">
-		<h3>Trung Quốc điều thêm 17 tàu đến khu vực giàn khoan</h3>
+		<%
+			if (request.getAttribute("itemNews")!=null) {
+				News itemNews = (News)request.getAttribute("itemNews");
+		%>
+		<h3><%= itemNews.getName() %></h3>
 		<div class="main-content">
-			<p>Để bảo vệ giàn khoan, Trung Quốc đã điều thêm 17 tàu các loại
-				so với hôm trước, sẵn sàng đâm va vào tàu Việt Nam.</p>
-			<p>Để bảo vệ giàn khoan, Trung Quốc đã điều thêm 17 tàu các loại
-				so với hôm trước, sẵn sàng đâm va vào tàu Việt Nam.</p>
-			<p>Để bảo vệ giàn khoan, Trung Quốc đã điều thêm 17 tàu các loại
-				so với hôm trước, sẵn sàng đâm va vào tàu Việt Nam.</p>
-			<p>Để bảo vệ giàn khoan, Trung Quốc đã điều thêm 17 tàu các loại
-				so với hôm trước, sẵn sàng đâm va vào tàu Việt Nam.</p>
+			<p><%= itemNews.getDetails() %></p>
 		</div>
+		<%} %>
 	</div>
 	<div class="clr"></div>
 </div>

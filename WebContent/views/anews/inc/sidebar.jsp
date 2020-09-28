@@ -6,13 +6,10 @@
 <h3>Danh mục tin</h3>
 <ul>
 	<%
-		if (request.getAttribute("catList") != null) {
+		if(request.getAttribute("catList")!=null){
 			ArrayList<Categories> catList = (ArrayList<Categories>) request.getAttribute("catList");
-			for (Categories cat : catList) {
+			for(Categories objCat : catList ){
 	%>
-	<li><a href="<%=request.getContextPath()%>/views/anews/danhmuc.jsp"><%=cat.getName()%></a></li>
-	<%
-		}
-		}
-	%>
+	<li><a href="<%=request.getContextPath() %>/cat?cid=<%=objCat.getId()%>"><%= objCat.getName() %></a></li>
+	<%}} %>
 </ul>
