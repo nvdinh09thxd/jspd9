@@ -14,6 +14,7 @@
 			<ul>
 				<%
 					if (request.getAttribute("listsNews") != null) {
+					@SuppressWarnings("unchecked")
 					ArrayList<News> listsNews = (ArrayList<News>) request.getAttribute("listsNews");
 					for (News objNews : listsNews) {
 						

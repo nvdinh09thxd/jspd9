@@ -7,6 +7,7 @@
 <ul>
 	<%
 		if(request.getAttribute("catList")!=null){
+		@SuppressWarnings("unchecked")
 			ArrayList<Categories> catList = (ArrayList<Categories>) request.getAttribute("catList");
 			for(Categories objCat : catList ){
 	%>
